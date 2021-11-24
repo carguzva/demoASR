@@ -67,11 +67,19 @@
         var1: '{{ final_var.meta }}'
       register: final_var_rollback
 
+    - name: Eliminar archivos anteriores
+      file: state=absent path={{ storage_path }}/{{ item }}.json
+      loop:
+        - '{{ file_changes_json }}'
+        - '{{ file_rollback_json }}'
+
+
     - name: Creando archivos de respaldo
       file: state=touch path={{ storage_path }}/{{ item }}.json
       loop:
         - '{{ file_changes_json }}'
         - '{{ file_rollback_json }}'
+
 
     - name: Guardando información de respaldo {{ file_changes_json }}.json y {{ file_rollback_json }}.json
       lineinfile: line="{{ item.record }}" dest={{ storage_path }}/{{ item.file }}.json
