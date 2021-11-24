@@ -25,7 +25,7 @@
    tabla_maps: { '300Mbps-IN' : '600Mbps-IN-T',
                  '100Mbps-IN' : '200Mbps-IN-T',
                  '50Mbps-IN' : '100Mbps-IN-T',
-                 '1Gbps-IN' : '2Gbps-IN-T',
+                 '1Gbps-IN' : '1Gbps-IN-T',
                  'tbd' : 'tbd' }
    elementos_var: [ 'GigabitEthernet0/0/0/3', 'GigabitEthernet0/0/0/4']
 
