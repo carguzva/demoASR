@@ -155,3 +155,4 @@
         - "result[0] not contains {{ item.subnet.1  }}/{{  item.mask_length.0 }}"
       when: item.subnet
       loop: "{{ var_routers.meta[key] }}"     
+
