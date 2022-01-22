@@ -40,7 +40,7 @@
     - name: Configure Internet Service Sub-Interface
       cisco.iosxr.iosxr_config:
         lines:
-        - description ***{{ item.descripcion }}***
+        - description *****{{ item.descripcion }} *****
         - service-policy input {{ item.sp_in }}-IN
         #- service-policy input {{ item.sp_in  }}-OUT
         - ipv4 address {{ item.ip }} {{ item.mask[0] }}
