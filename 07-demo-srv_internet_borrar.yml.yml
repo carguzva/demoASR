@@ -128,7 +128,7 @@
       loop: "{{ var_routers.meta[key] }}"
       
     - name: Delete Prefix-list
-      cisco.iosxr.iosxr_config:
+      cisco.iosxr.iosxr_command:
         commands:
         - command: 'edit prefix-set {{  item.prefix_set  }} inline remove {{  item.subnet.0 }}/{{  item.mask_length.0 }}'
           prompt: 'Proceed with commmit \(yes/no\)\? \[yes\]:'
