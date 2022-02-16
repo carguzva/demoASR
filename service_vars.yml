@@ -19,3 +19,5 @@
 
 # Variables para el ajuste de policy
 #csv_file: 'internet.csv'
+#routers_cisco: 'xr-1'
+#bgp_AS: '6568'
